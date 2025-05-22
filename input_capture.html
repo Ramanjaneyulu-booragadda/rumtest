@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Capture Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        label, input, button { font-size: 1.1em; }
+        #output { margin-top: 1em; color: green; }
+    </style>
+</head>
+<body>
+    <label for="userInput">Enter something:</label>
+    <input type="text" id="userInput" />
+    <button onclick="captureInput()">Submit</button>
+    <div id="output"></div>
+    <script>
+        function captureInput() {
+            const input = document.getElementById('userInput').value;
+            document.getElementById('output').textContent = 'You entered: ' + input;
+        }
+    </script>
+</body>
+</html>
